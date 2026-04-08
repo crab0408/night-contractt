@@ -1,0 +1,109 @@
+main{
+    max-width:1200px;
+    margin:auto;
+}
+body {  
+    line-height: auto;
+     display:flex;
+     flex-direction:column;
+     min-height:100vh;
+     background-color: #000000;
+}
+
+.header {
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    transition:0.4s;
+    
+}
+
+.logo{
+    letter-spacing:5px;
+    list-style: none;
+    display: flex;
+    padding: 15px;
+    font-size: 20px;
+    color: #6203c1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.nav-links {
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    padding: 15px;
+    gap: 20px;
+}
+/*文字*/
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size:20px;
+    position:relative;
+    transition:0.3s;
+}
+/*文字顏色漸變*/
+.nav-links a:hover{
+    color:#c084fc;
+    transform:translateY(-2px);
+}
+/* 底線動畫 */
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#a855f7;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+.dropdown{
+position: relative;
+}
+/*黑框*/
+.dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+
+    background:black;
+    list-style:none;
+    padding:10px 0;
+
+    min-width:50px;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+
+    transition:0.3s;
+    z-index:1000 ;
+}
+.dropdown-menu li{
+    padding:10px 20px;
+}
+.dropdown-menu li a{
+    color: white;
+    text-decoration: none;
+}
+.dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}

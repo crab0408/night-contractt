@@ -1,0 +1,42 @@
+.cursor
+{
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    cursor: none;
+}
+.cb{
+    position: fixed;   /* 很重要 */
+    z-index: 999;
+    background:#561;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    pointer-events: none;
+
+    box-shadow:
+    0 0 20px #561,
+    0 0 60px #561,
+    0 0 100px #561;
+
+    animation:colors 3s infinite;
+}
+@keyframes colors{
+    0%{
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+.cb::before{
+    content:"" ;
+    position: absolute;
+    background-color: aqua;
+    width: 45px;
+    height: 45px;
+    opacity: 0.2;
+    transform:translate(-30%,-30%);
+    border-radius: 50%;
+}

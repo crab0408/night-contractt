@@ -1,0 +1,35 @@
+/* 通用設定 */
+* {
+  box-sizing: border-box;
+}
+
+/* 共用 grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* 共用卡片 */
+.card {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* hover */
+.card:hover {
+  transform: translateY(-10px);
+}
